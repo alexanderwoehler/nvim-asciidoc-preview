@@ -30,7 +30,8 @@ function M.getOpenCmd()
     if vim.fn.has('wsl') == 1 then
       return 'wslview'
     else
-      return 'xdg-open'
+      -- "xdg-open" is deprecated and will open pluma on amazonlinux instead of a proper browser
+      return 'google-chrome'
     end
   end
 
